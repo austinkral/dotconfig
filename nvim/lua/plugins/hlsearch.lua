@@ -1,3 +1,8 @@
+---------------------------------------------------------
+-- hlsearch.nvim
+-- Auto toggles search highlighting
+-- https://github.com/nvimdev/hlsearch.nvim
+---------------------------------------------------------
 return { 
 	"nvimdev/hlsearch.nvim", 
 	lazy = true,

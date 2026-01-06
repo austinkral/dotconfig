@@ -1,3 +1,8 @@
+---------------------------------------------------------
+-- minimal.nvim
+-- tomorrow-night-esque color theme
+-- https://github.com/yazeed1s/minimal.nvim
+---------------------------------------------------------
 return {
 	"yazeed1s/minimal.nvim",
 	lazy = false,
