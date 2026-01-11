@@ -1,4 +1,5 @@
--- If language is supported by LSP, autotrigger 'C-X C-O' while typing
+--[[ Deprecated by using mini.completion - achieves autocompletion in absence of mini.completion
+--If language is supported by LSP, autotrigger 'C-X C-O' while typing
 vim.api.nvim_create_autocmd('LspAttach', {
     callback = function(ev)
 	local client = vim.lsp.get_client_by_id(ev.data.client_id)
@@ -7,7 +8,10 @@ vim.api.nvim_create_autocmd('LspAttach', {
 	end
     end,
 })
+
 -- Disable autoselect from dropdown
 vim.cmd("set completeopt+=noselect")
-
+]]
 vim.lsp.enable({"lua_ls", "tinymist"})
+
+require("mini.completion").setup()

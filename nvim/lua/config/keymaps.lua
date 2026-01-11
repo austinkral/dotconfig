@@ -16,20 +16,8 @@ vim.keymap.set({ 'n' }, '<A-j>', '<C-w>j')
 vim.keymap.set({ 'n' }, '<A-k>', '<C-w>k')
 vim.keymap.set({ 'n' }, '<A-l>', '<C-w>l')
 
--- Telescope
-local builtin = require('telescope.builtin')
-local actions = require('telescope.actions')
-vim.keymap.set({ 'n', 't', 'i', 'v'}, '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
-vim.keymap.set({ 'n', 't', 'i', 'v'}, '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
-vim.keymap.set({ 'n', 't', 'i', 'v'}, '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
-vim.keymap.set({ 'n', 't', 'i', 'v'}, '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
-require('telescope').setup({
-    defaults = {
-	mappings = {
-	    i = {
-		['<esc>'] = actions.close,
-	    },
-	},
-    },
-})
-
+-- Mini Nvim
+require("mini.pick").setup()
+require("mini.icons").setup()
+vim.keymap.set({ 'n' }, '<leader>f', ':Pick files<CR>')
+vim.keymap.set({ 'n' }, '<leader>h', ':Pick help<CR>')
