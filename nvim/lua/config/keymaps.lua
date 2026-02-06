@@ -21,3 +21,7 @@ require("mini.pick").setup()
 require("mini.icons").setup()
 vim.keymap.set({ 'n' }, '<leader>f', ':Pick files<CR>')
 vim.keymap.set({ 'n' }, '<leader>h', ':Pick help<CR>')
+
+-- Typst Preview
+require 'typst-preview'.update()
+vim.keymap.set({ 'n' }, '<leader>ap', ':TypstPreview<CR>')
